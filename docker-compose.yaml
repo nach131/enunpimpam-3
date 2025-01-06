@@ -1,0 +1,11 @@
+services:
+  nginx:
+    image: nginx:latest  # Usa la última versión de la imagen oficial de NGINX
+    container_name: nginx-basic
+    ports:
+      - "80:80"  # Mapea el puerto 80 del host al puerto 80 del contenedor
+    volumes:
+      - ./docs/.vitepress/dist:/usr/share/nginx/html  # Monta un directorio local para servir contenido
+      # - ./nginx.conf:/etc/nginx/nginx.conf:ro  # Opcional: Archivo de configuración personalizado
+      - ./default.conf:/etc/nginx/conf.d/default.conf:ro  # Opcional: Archivo de configuración personalizado
+    restart: always  # Reinicia el contenedor automáticamente en caso de fallo
