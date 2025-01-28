@@ -2,8 +2,8 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "enunpimpam.com",
-  description: "Un poco de todo",
+  title: "My Awesome",
+  description: "A Vitepress",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
